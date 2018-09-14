@@ -20,7 +20,7 @@ public class NewPasswordValidator implements ConstraintValidator<NewPassword,Str
         //String regex="^([A-Z]|[a-z]|[0-9]|[`~!@#$%^&*()+=|{}':;',\\\\[\\\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“'。，、？]){3,20}$";
         //Pattern pwdPattern=Pattern.compile(regex);
         //return s==null||s.equals("")||pwdPattern.matcher(s).matches();
-        if(s==null||s.equals("")){
+        if(s==null||s.length()<1){
             return true;
         }
         Pattern lettleNumberFallLinePattern=Pattern.compile(lettleNumberFallLine);
