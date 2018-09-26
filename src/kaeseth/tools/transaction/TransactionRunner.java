@@ -8,14 +8,21 @@ import kaeseth.tools.transaction.exception.WorkErrorException;
 import kaeseth.tools.transaction.exception.WorkerListNotFullyException;
 
 /**
- * if do same sql, please @Transactional to this class exec methods.
+ * 用于执行某些不可分割的任务，比如SQL语句。
  * @author kaeseth
- * @version
+ * @version 1.0
  *
  */
 
 public class TransactionRunner {
 	
+	/**
+	 * 获取一个执行器
+	 * @param aim 目标对象
+	 * @param worker 执行器
+	 * @param <T> 目标对象的类型
+	 * @return 执行器
+	 */
 	public static <T> Supplier<Boolean> of(T aim,Supplier<T> worker){
 		return ()->{
 			T real=worker.get();
@@ -27,6 +34,13 @@ public class TransactionRunner {
 		};
 	}
 	
+	/**
+	 * 执行单个执行器
+	 * @param aim 目标对象
+	 * @param worker 执行器
+	 * @param <T> 目标对象的类型
+	 * @return 实际返回对象
+	 */
 	@Transactional
 	public static <T> T exec(T aim,Supplier<T> worker) {
 		T real;
@@ -42,6 +56,11 @@ public class TransactionRunner {
 		}
 	}
 	
+	/**
+	 * 批量执行多个执行器
+	 * @param workerList 执行器队列
+	 * @return 执行器队列中成功执行的执行器数量
+	 */
 	@Transactional
 	public static Integer exec(List<Supplier<Boolean>> workerList) {
 		if(workerList==null||workerList.isEmpty()) {

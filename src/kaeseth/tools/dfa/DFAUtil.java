@@ -6,6 +6,11 @@ import java.util.Set;
 import kaeseth.tools.dfa.exception.StateMachineStatusErrorException;
 import java.util.HashMap;
 
+/**
+ * DFA工具
+ * @author kaeseth
+ *
+ */
 public class DFAUtil {
 	
 	private static HashMap<String,Object> source=null;//原状态机

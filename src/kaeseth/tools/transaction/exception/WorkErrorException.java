@@ -1,7 +1,7 @@
 package kaeseth.tools.transaction.exception;
 
 /**
- * A worker in list or only one running error.
+ * 执行器执行出错
  * @author kaeseth
  * @version 1.0
  */

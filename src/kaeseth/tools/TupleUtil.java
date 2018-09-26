@@ -9,7 +9,7 @@ import kaeseth.tools.tuple.Tuple7;
 import kaeseth.tools.tuple.Tuple8;
 
 /**
- * power by {@link reactor.util.function}
+ * power by {reactor.util.function}
  * 
  * @author kaeseth
  * @version 1.0
