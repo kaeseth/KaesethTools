@@ -22,8 +22,8 @@ public class DFAUtil {
 	 * 原状态机只能初始化，且每次初始化都要分配新的内存，不处理原有内存，
 	 * 因为原有内存可能正在被匹配算法使用，等所有匹配算法释放掉所有内存后，
 	 * 再由GC收回内存。
-	 * @param datasource 数据源
-	 */
+	* @param datasource 数据源
+	*/
 	@SuppressWarnings("unchecked")
 	public static void initStateMachine(List<String> datasource){
 		DFAUtil.disabled=true;
