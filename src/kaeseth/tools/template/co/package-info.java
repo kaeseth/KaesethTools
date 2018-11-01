@@ -1,4 +1,5 @@
 /**
+ * 处理缓存的存取
  * @author kaeseth
  *
  */
