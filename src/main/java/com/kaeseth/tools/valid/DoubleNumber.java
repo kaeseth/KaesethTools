@@ -4,6 +4,13 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
+/**
+ * 检查是否是合适的浮点数的注解
+ * 
+ * @author kaeseth
+ * @since 2019-09-029
+ * @version 1.0
+ */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD,ElementType.METHOD})
 @Inherited

@@ -5,6 +5,13 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.regex.Pattern;
 
+/**
+ * 判断密码是否由指定的字符组合而成的检验类
+ * 
+ * @author kaeseth
+ * @since 2019-09-29
+ * @version 1.0
+ */
 @Component
 public class NewPasswordValidator implements ConstraintValidator<NewPassword,String> {
     @Override

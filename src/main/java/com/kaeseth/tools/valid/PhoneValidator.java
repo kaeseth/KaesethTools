@@ -5,6 +5,13 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.regex.Pattern;
 
+/**
+ * 检查是否是合适的手机号的校验类
+ * 
+ * @author kaeseth
+ * @since 2019-09-029
+ * @version 1.0
+ */
 @Component
 public class PhoneValidator implements ConstraintValidator<Phone,String> {
     @Override

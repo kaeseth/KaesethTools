@@ -9,6 +9,8 @@ import com.kaeseth.tools.tuple.Tuple7;
 import com.kaeseth.tools.tuple.Tuple8;
 
 /**
+ * 用于创建元组的工具.
+ * 
  * power by {reactor.util.function}
  * 
  * @author kaeseth

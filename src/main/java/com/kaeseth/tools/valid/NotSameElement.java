@@ -9,6 +9,22 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
+/**
+ * 用于检查列表或数组内是否有相同的元素的方法.
+ * 
+ * <p>
+ * 只支持基本数据类型和字符串.
+ * </p>
+ * 
+ * <p>
+ * 要要支持自定义的类，需要重写类的toString(){@link Object.toString()}方法，使不同的元素
+ * 返回不同的字符串.
+ * </p>
+ * 
+ * @author kaeseth
+ * @since 2019-09-29
+ * @version 1.0
+ */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD,ElementType.METHOD})
 @Inherited
